@@ -1,0 +1,99 @@
+<?xml  version='1.0' encoding='windows-1252' ?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="6A6E9FB8-7" name="AbRA" version="1.0" notes="AbRA"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="cause" notes="A Cause is a specific implementation of AbstractCause that defines occurrence property with the type Real." cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Dependency">
+						<Property name="direction" value="Source -&gt; Destination"/>
+						<Property name="_MeaningBackwards" value="Caused by"/>
+						<Property name="_MeaningForwards" value="Causes"/>
+						<Property name="_lineStyle" value="treeLH"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="control" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ControllingMeasure" baseStereotypes="ControllingMeasure">
+				<AppliesTo>
+					<Apply type="Dependency">
+						<Property name="_lineStyle" value="treeLH"/>
+						<Property name="_MeaningBackwards" value="Controls"/>
+						<Property name="_MeaningForwards" value="Controlled by"/>
+						<Property name="direction" value="Source -&gt; Destination"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="ControllingMeasure" notes="A measure taken to address (mitigate severity, reduce probability of occurrence, increase probability of detection) a potential or real adverse situation." cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" isAbstract="true">
+				<TaggedValues>
+					<Tag name="ConfidenceLevel" type="enumeration" description="" unit="" values="NotRated,Low,Medium,High" default="NotRated"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="FailureMode" notes="See FailureMode library class for the definition of a situation concept.&#xA;The FailureMode stereotype is only needed to distinguish FailureModes from other types of situations." cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<metaconstraints>
+					<metaconstraint umlRole="classifier" constraint="AbRA::FailureMode"/>
+					<metaconstraint umlRole="source" constraint="AbRA::cause;AbRA::control;AbRA::prevent;AbRA::violate"/>
+					<metaconstraint umlRole="target" constraint="AbRA::cause"/>
+				</metaconstraints>
+				<stereotypedrelationships>
+					<stereotypedrelationship stereotype="AbRA::cause" constraint="AbRA::FailureMode"/>
+					<stereotypedrelationship stereotype="AbRA::control" constraint="Requirement"/>
+					<stereotypedrelationship stereotype="AbRA::prevent" constraint="Requirement"/>
+					<stereotypedrelationship stereotype="AbRA::relevantTo" constraint="Element"/>
+					<stereotypedrelationship stereotype="AbRA::violate" constraint="Requirement"/>
+				</stereotypedrelationships>
+				<AppliesTo>
+					<Apply type="Class"/>
+					<Apply type="Object"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="Severity" type="enumeration" description="" unit="" values="NotRated,NoEffect,Low,Medium,High" default="NotRated"/>
+					<Tag name="Occurrence" type="enumeration" description="" unit="" values="NotRated,Low,Medium,High" default="NotRated"/>
+					<Tag name="ConfidenceLevel" type="enumeration" description="" unit="" values="NotRated,Low,Medium,High" default="NotRated"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="prevent" notes="A kind of ControllingMeasure taken to reduce probability of occurrence of the situation under analysis." cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ControllingMeasure" baseStereotypes="ControllingMeasure">
+				<AppliesTo>
+					<Apply type="Dependency">
+						<Property name="_lineStyle" value="treeLH"/>
+						<Property name="_MeaningBackwards" value="Prevents"/>
+						<Property name="_MeaningForwards" value="Prevented by"/>
+						<Property name="direction" value="Source -&gt; Destination"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="relevantTo" notes="The RelevantTo relationship is used to link situations to system model elements to provide context and relevance for the Situation.  Furthermore, the relationship reuses the following functionality from the DirectedRelationshipPropertyPath concept: targetContext and targetPropertyPath.&#xA; &#xA;For example, in an insulin pump, a Situation where the insulin pump cannot be charged would be related to the main battery element in the system model.&#xA;" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Dependency">
+						<Property name="_lineStyle" value="treeLH"/>
+						<Property name="_MeaningBackwards" value="Related from"/>
+						<Property name="_MeaningForwards" value="Relevant to"/>
+						<Property name="direction" value="Source -&gt; Destination"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Undeveloped" notes="Undeveloped stereotype can be applied in combination with Goal or Strategy stereotype to express the fact that the goal or strategy is not fully developer, and therefore may lack crucial details." cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="FailureMode" baseStereotypes="FailureMode"/>
+			<Stereotype name="violate" notes="The violates relationship indicates a situation where a system is violating a prescription (requirement, constraint, etc.). It is used to connect situations to requirements, design constraints and any other elements of system models which prescribe a characteristic of the system.&#xA; &#xA;For example, a Situation where the insulin pump drains the battery in 3 days violates the requirement that “The system must work for 1 week without the need to replace batteries”.&#xA;" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Dependency">
+						<Property name="_lineStyle" value="treeLH"/>
+						<Property name="_MeaningBackwards" value="Violated by"/>
+						<Property name="_MeaningForwards" value="Violates"/>
+						<Property name="direction" value="Source -&gt; Destination"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel>
+			<Metaclass name="Requirement" notes="">
+				<metaconstraints>
+					<metaconstraint umlRole="target" constraint="AbRA::control;AbRA::prevent;AbRA::violate"/>
+				</metaconstraints>
+				<stereotypedrelationships>
+					<stereotypedrelationship stereotype="SysML1.4::satisfy" constraint="Element"/>
+				</stereotypedrelationships>
+			</Metaclass>
+		</Metamodel>
+	</Content>
+</UMLProfile>

@@ -1,0 +1,33 @@
+<?xml  version='1.0' encoding='windows-1252' ?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="6B93E3A8-2" name="Safety Analysis" version="1.0" notes="Safety Analysis"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="Elements" notes="" cx="289" cy="88" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="AbRA::FailureMode(UML::Class)" type="" description="" unit="" values="" default="FailureMode"/>
+					<Tag name="SysML1.4::Requirement(UML::Requirement)" type="" description="" unit="" values="" default="Requirement"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Relations" notes="" cx="289" cy="140" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="AbRA::cause(UML::Dependency)" type="" description="" unit="" values="" default="Cause"/>
+					<Tag name="AbRA::violate(UML::Dependency)" type="" description="" unit="" values="" default="Violate"/>
+					<Tag name="AbRA::control(UML::Dependency)" type="" description="" unit="" values="" default="Control"/>
+					<Tag name="AbRA::prevent(UML::Dependency)" type="" description="" unit="" values="" default="Prevent"/>
+					<Tag name="AbRA::relevantTo(UML::Dependency)" type="" description="" unit="" values="" default="Relevant To"/>
+					<Tag name="SysML1.4::Satisfy(UML::Dependency)" type="" description="" unit="" values="" default="Satisfy"/>
+				</TaggedValues>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>

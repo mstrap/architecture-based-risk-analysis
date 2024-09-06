@@ -4,7 +4,7 @@
 
 ## Licensing
 We have the goal to provide everything to the engineering community, to facilitate the use of AbRA.
-Therefore, the tooling available under [MIT license](LICENSE).
+Therefore, the tooling available under [Mozilla Public License 2.0](LICENSE).
 The [documentation](docs) is available under [CC BY 4.0](docs/LICENSE).
 See also the license files in the specific folders.
 
@@ -26,6 +26,8 @@ The purpose of this repository is to facilitate the adoption of the architecture
 - providing guidelines and lessons-learned
 - providing tooling for a simple adoption by architects
 - providing automation-solutions for a simple adopting in projects
+
+Please take a look into the [tooling](tooling/README.md) section for downloads.
 
 ## Papers
 

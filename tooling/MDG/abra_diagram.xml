@@ -1,0 +1,29 @@
+<?xml  version='1.0' encoding='windows-1252' ?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="2E09382B-D" name="AbRA Diagrams" version="1.0" notes="AbRA Diagrams"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="FMP" notes="" cx="150" cy="80" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Diagram_Logical">
+						<Property name="diagramID" value="FMP"/>
+						<Property name="pdata" value="HideParents=1;"/>
+						<Property name="toolbox" value="Safety Analysis"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="CI" notes="" cx="90" cy="75" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Diagram_Logical">
+						<Property name="diagramID" value="CI"/>
+						<Property name="pdata" value="HideParents=1;"/>
+						<Property name="toolbox" value="Model Structure"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>

@@ -1,0 +1,33 @@
+<?xml  version='1.0' encoding='windows-1252' ?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="804D1798-0" name="Model Structure" version="1.0" notes="Model Structure"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="Elements" notes="" cx="266" cy="127" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="UML::Package" type="" description="" unit="" values="" default="Component Package"/>
+					<Tag name="SysML1.4::Requirement(UML::Requirement)" type="" description="" unit="" values="" default="Requirement"/>
+					<Tag name="UML::Interface" type="" description="" unit="" values="" default="Interface"/>
+					<Tag name="UML::Class" type="" description="" unit="" values="" default="Class"/>
+					<Tag name="UML::Activity" type="" description="" unit="" values="" default="Activity"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Relations" notes="" cx="217" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="UML::Generalization" type="" description="" unit="" values="" default="Generalization"/>
+					<Tag name="UML::Realization" type="" description="" unit="" values="" default="Realization"/>
+					<Tag name="SysML1.4::Satisfy(UML::Dependency)" type="" description="" unit="" values="" default="Satisfy"/>
+				</TaggedValues>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>
